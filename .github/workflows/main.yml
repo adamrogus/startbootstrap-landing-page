@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Blob storage website CI
 
 # Controls when the action will run. 
 on:
@@ -23,7 +23,7 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
-            az storage blob upload-batch --account-name roguetechweb -d '$web' -s .
+            az storage blob upload-batch --account-name roguetechweb -d 'wwwroot' -s .
       # Azure logout 
     - name: logout
       run: |
